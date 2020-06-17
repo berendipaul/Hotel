@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Make site responsive on mobile/tablet -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Happy Paws Hotel</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/stylesheets/main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/2abd404c17.js" crossorigin="anonymous"></script>
+		<script src="https://js.stripe.com/v3/"></script>
+	</head>
+	<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarCollapse">
+		  <ul class="navbar-nav" class="" >
+			  <li class="nav-item"><a class="nav-link" href="/">HOME</a></li>
+			  <li class="nav-item"><a class="nav-link" href="/about">ABOUT</a></li>
+			  <li class="nav-item"><a class="nav-link" href="/rooms">ROOMS</a></li>
+			  <li class="nav-item"><a class="nav-link" href="/daycare">DAYCARE</a></li>
+			  <li class="nav-item"><a class="nav-link" href="/salon">SALON & SPA</a></li>
+			  <li class="nav-item"><a class="nav-link" href="/training">TRAINING</a></li>
+			  <li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
+			  <li class="nav-item"><a class="nav-link" href="/contact">CONTACT</a></li>
+              <% if(!currentUser){ %>
+                  <li class="nav-item <%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>">
+					 <a class="nav-link" href="/login">LOGIN</a></li>
+                  <li class="nav-item <%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>">
+					 <a class="nav-link" href="/register">SIGN UP</a></li>
+              <% } else { %>
+                  <li class="nav-item">
+					  <a class="nav-link" href="#">Signed In As <%= currentUser.username %></a>
+			      </li>
+                  <li class="nav-item">
+					  <a class="nav-link" href="/logout">LOGOUT</a>
+			      </li>
+              <% } %>
+          </ul>
+      </div>
+    </nav>
+	<div class = "container">
+		<% if(error && error.length > 0){ %>
+	      <div class="alert alert-danger" role="alert">
+	         <%= error %>
+		  </div>
+		<% } %>
+		<% if(success && success.length > 0){ %>
+		   <div class="alert alert-success" role="alert">
+	         <%= success %>
+		</div>
+		   <% } %>
+	</div>
+<div class="container">
+

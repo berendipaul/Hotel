@@ -1,0 +1,169 @@
+.featurette {
+	background-color: #8181810f;
+}
+h2 {
+	font-family: 'Dancing Script', cursive;
+}
+.h2-top {
+	padding-top: 20px;
+}
+
+.h2-bottom{
+	padding-bottom: 25px;
+}
+.text-color {
+	color: #ad9263;
+}
+
+.color-white {
+	padding: 3px;
+	color:white;
+}
+.border-text {
+	border: 2px solid white;
+}
+a {
+	color: #ad9263;
+}
+.short-line {
+	width:20%;
+	border: 1px solid #ad9263;
+}
+
+.hr-space {
+	padding: 15px 0px;
+}
+
+.hr-space-bottom {
+	padding-bottom: 40px;
+}
+
+.schedule {
+	padding-bottom: 15px;
+}
+
+.paragraf{
+	font-family: 'Dosis', sans-serif;
+}
+
+.text-space-top-m {
+	padding-top: 40px;
+}
+
+.text-space-top {
+	padding: 70px;
+}
+
+.text-space-2 {
+	padding: 60px 0px 0px 25px;
+}
+.text-space {
+	padding: 20px 0px;
+}
+.text-space-bottom {
+	padding-bottom:20px;
+}
+.text-space-bottom-m {
+	padding-bottom:50px;
+}
+.text-space-bottom-large {
+	padding-bottom:70px;
+}
+.img-space {
+	padding-top:25px;
+}
+
+.img-space-2 {
+	padding: 20px 0px;
+}
+.pawn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90px;
+  height: 90px;
+  padding: 10px;
+}
+
+
+.media {
+	background-color: #8181810f;
+}
+
+.mr-3 {
+	width: 350px;
+	height: 450px;
+	margin-right: 0px;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+  .thumbnail img {
+      width: 100%;
+  }
+  
+  .thumbnail {
+      padding: 0;
+  }
+  
+  .caption-full .thumbnail {
+      padding: 9px;
+  }
+  
+  #delete-form {
+      display: inline;
+  }
+  
+.text-center { 
+	text-align: center;
+}
+
+@media (min-width: 380px) and (max-width: 460px) {
+	.mr-3 {
+		padding: 60px 0px 10px 10px;
+		width: 160px;
+		height: 250px;
+	}
+}
+
+@media (min-width: 461px) and (max-width: 765px) {
+	.mr-3 {
+		padding: 60px 0px 10px 10px;
+		width: 230px;
+		height: 480px;
+	}
+}
+
+@media (min-width: 766px) and (max-width: 1000px) {
+    .mr-3 {
+		padding: 50px 0px 0px 10px;
+		width: 250px;
+		height: 430px;
+	}
+}
+  

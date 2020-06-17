@@ -1,0 +1,71 @@
+<%- include ("../partials/header") %>
+<div class="container paragraf text-center">
+	<div>
+		<h2>ROOMS & SUITES</h2>
+		<hr class="short-line">
+		<img class="pawn text-center" src="https://i.imgur.com/2MjBOPH.png">
+		 <div>
+			<h4>
+				BINE AI VENIT LA HAPPY PAWN HOTEL,
+				<BR>
+				UN HOTEL IN CARE NU EXISTA CUSTI SI IN CARE LUXUL SI SIGURANTA ANIMALUTULUI DE COMPANIE SUNT O PRIORITATE PENTRU NOI! 
+			 </h4>
+			 <hr class="short-line">
+				<h4 class="text-color animate__animated animate__backInDown">
+					TOATE PRETURILE PORNESC DE LA 220 RON / NOAPTE
+				</h4>
+			  <HR class="short-line">
+				<div>
+					<p>
+					  Happy Pawn Hotel ofera oaspetilor nostri, animalutele de companie, cea mai inalte calitate de ingrijire si confort, oferind 103 camere personalizate pentru animalutul tau rasfatat.
+					Fiecare detaliu minutios a fost inclus, astfel incat animalul dumneavoastra de companie se va bucura de un sejur sigur, distractiv si relaxant in timp ce va fi cazat in hotelul nostru. Personalul nostru este foarte bine instruit, astfel ca va puteti relaxa stiind ca animalutul dumneavostra de companie se afla pe maine sigure cat timp este cazat in resortul nostru.
+					Pentru a va asigura ca animalul dumneavoastra de companie are o experienta de neegalat, hotelul nostru are personal 24 de ore pe zi, in fiecare zi a anului.
+					</p>
+				  </div>
+		  </div>
+	</div>
+</div>
+<%if(currentUser && currentUser.isAdmin) { %>
+<header class="jumbotron">
+  <div class="container paragraf">
+	 <h1>Bine ai venit venit la Happy Pawn Hotel!</h1>
+	 <p>
+		<a class="btn btn-primary btn-lrg" href="/rooms/new">Adauga Camera Noua</a>
+	 </p>
+  </div>
+</header>
+
+
+
+
+<% } %>
+   <div class="row text-center paragraf" id="campground-grid">
+<% rooms.forEach((room) => { %>
+	<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+		<div class="card">
+          <img class="card-img-top" src="<%= room.image %>" alt="<%= room.name %>">
+           <div class="card-body">
+            <h5 class="card-title"><%= room.name %></h5>
+            <a href="/rooms/<%= room._id %>" class="btn btn-primary">Detalii</a>
+       </div>
+      </div>
+    </div>
+<% }); %>
+   </div>
+<header class="jumbotron">
+  <div class="container text-center paragraf">
+	 <p>
+		 Happy Pawn Hotel ofera un discount de 10% pentru animalele de companie care se cazeaza cel putin 10 zile la hotelul nostru. Daca ai vreo nelamurire, te rugam sa suni la biroul nostru de informatii la numarul de telefon 0749041844.
+	  </p>
+	  <h5>
+		  <strong>Animalele de companie din aceeasi familie care stau in aceeasi camera beneficiaza de o reducere de 20%</strong>
+	  </h5>
+	  <p>
+		 Intrebati despre serviciul nostru de servire a mancarii in camera, care ofera carne organica, peste si legume.
+	  </p>
+	  <p>
+		  Serviciul nostru de transport al animalelor este disponibil.
+	  </p>
+  </div>
+</header>
+<%- include ("../partials/footer") %>
